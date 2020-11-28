@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.wear.widget.BoxInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_grey"
+    android:padding="@dimen/box_inset_layout_padding"
+    tools:context=".P1"
+    tools:deviceIds="wear">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/inner_frame_layout_padding"
+        app:boxedEdges="all">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:text="타임머신"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="@dimen/text_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <ScrollView
+                    android:layout_marginTop="15dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_marginTop="@dimen/text_size"
+                            android:text="1. 정면의 스위치를 누른다"
+                            android:textSize="@dimen/hint_size"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:layout_marginTop="@dimen/text_size"
+                            android:text="2. 바닥에 떨어져있는 김강호의 옷에서 열쇠를 꺼내어 게시판 뒤에 꽂고 홀로그램을 작동시킨다"
+                            android:textSize="@dimen/hint_size"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:layout_marginTop="@dimen/text_size"
+                            android:text="3. 김강호의 메세지와 게시판을 통하여 과거로 가는 시점을 알아낸다"
+                            android:textSize="@dimen/hint_size"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:layout_marginTop="@dimen/text_size"
+                            android:text="4. 배전반을 열어 전선을 연결한다. 게시판의 시간의 다리를 사다리 타기 결과는 전선의 순서이다"
+                            android:textSize="@dimen/hint_size"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:layout_marginTop="@dimen/text_size"
+                            android:text="5. 기둥 아래에서 원토아를 획득한다"
+                            android:textSize="@dimen/hint_size"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:layout_marginTop="@dimen/text_size"
+                            android:text="6. 톱니바퀴 중앙에 원토아를 부착하고, 키패드에 년도를 입력하여 타임머신을 작동시킨다"
+                            android:textSize="@dimen/hint_size"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:layout_marginTop="@dimen/text_size"
+                            android:text="7. 타임머신을 빠져 나온 뒤 김재본으로부터 지도를 받아서 이발소로 향한다"
+                            android:textSize="@dimen/hint_size"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </ScrollView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</androidx.wear.widget.BoxInsetLayout>

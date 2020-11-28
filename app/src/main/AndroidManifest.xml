@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ticwatche2">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@android:style/Theme.DeviceDefault">
+        <activity android:name=".ManagerActivity" />
+        <activity android:name=".P142" />
+        <activity android:name=".P452" />
+        <activity android:name=".P451" />
+        <activity android:name=".P442" />
+        <activity android:name=".P441" />
+        <activity android:name=".P432" />
+        <activity android:name=".P431" />
+        <activity android:name=".P422" />
+        <activity android:name=".P421" />
+        <activity android:name=".P412" />
+        <activity android:name=".P411" />
+        <activity android:name=".P242" />
+        <activity android:name=".P241" />
+        <activity android:name=".P232" />
+        <activity android:name=".P231" />
+        <activity android:name=".P222" />
+        <activity android:name=".P221" />
+        <activity android:name=".P212" />
+        <activity android:name=".P211" />
+        <activity android:name=".P152" />
+        <activity android:name=".P151" />
+        <activity android:name=".RoomHint" />
+        <activity android:name=".P141" />
+        <activity android:name=".P132" />
+        <activity android:name=".P131" />
+        <activity android:name=".P112" />
+        <activity android:name=".P121" />
+        <activity android:name=".P122" />
+        <activity android:name=".P111" />
+        <activity android:name=".TimeOver" />
+        <activity android:name=".RoomCode" />
+        <activity android:name=".P5" />
+        <activity android:name=".P4" />
+        <activity android:name=".P3" />
+        <activity android:name=".P2" />
+        <activity android:name=".P1" />
+        <activity
+            android:name=".TimeActivity"
+            android:label="@string/title_activity_time" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.wearable.standalone"
+            android:value="true" />
+
+        <uses-library
+            android:name="com.google.android.wearable"
+            android:required="true" />
+    </application>
+
+    <uses-feature android:name="android.hardware.type.watch" />
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+</manifest>
