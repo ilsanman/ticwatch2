@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/dark_grey"
     android:padding="@dimen/box_inset_layout_padding"
-    tools:context=".TimeOver"
+    tools:context=".StartActivity"
     tools:deviceIds="wear">
 
     <FrameLayout
@@ -15,14 +15,15 @@
         android:padding="@dimen/inner_frame_layout_padding"
         app:boxedEdges="all">
 
-        <TextView
-            android:gravity="center"
-            android:id="@+id/hintUse"
+        <Button
             android:textColor="@color/white"
             android:textSize="@dimen/text_size"
+            android:background="@color/dark_grey"
             android:layout_gravity="center"
+            android:id="@+id/button"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="Start" />
 
     </FrameLayout>
 </androidx.wear.widget.BoxInsetLayout>

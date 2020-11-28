@@ -18,15 +18,37 @@ public class ManagerActivity extends WearableActivity {
         setContentView(R.layout.activity_manager);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
-        hintUse = (TextView) findViewById(R.id.hintUse);
+        hintUse = findViewById(R.id.hintUse);
 
         Intent getIntent = getIntent();
-        int hintCount = (int) getIntent.getSerializableExtra("hintCount");
-        ArrayList hintNumber = (ArrayList) getIntent.getSerializableExtra("hintNumber");
-        String hintUses = "";
-        for (int i = 0; i < hintNumber.size(); i++) {
-            hintUses += (hintNumber.get(i) + ", ");
+
+        long countDownTime = (long) getIntent.getSerializableExtra("countDownTime");
+        long getHour = countDownTime / (60 * 60 * 1000) ;
+        String hour = String.valueOf(getHour);
+        long getMin = (countDownTime - (getHour * 60 * 60 * 1000)) / (60 * 1000);
+        String min = String.valueOf(getMin);
+        long getSecond = (countDownTime - (getHour * 60 * 60 * 1000) - (getMin * 60 * 1000)) / 1000;
+        String second = String.valueOf(getSecond);
+
+        if (hour.length() == 1) {
+            hour = "0" + hour;
         }
-        hintUse.setText(hintCount + "ea, " + hintUses);
+        if (min.length() == 1) {
+            min = "0" + min;
+        }
+        if (second.length() == 1) {
+            second = "0" + second;
+        }
+        String time = hour + ":" + min + ":" + second;
+
+        int hintCount = (int) getIntent.getSerializableExtra("hintCount");
+
+        ArrayList hintArrayList = (ArrayList) getIntent.getSerializableExtra("hintArrayList");
+        String hintUses = "";
+        for (int i = 0; i < hintArrayList.size(); i++) {
+            hintUses += (hintArrayList.get(i) + ", ");
+        }
+
+        hintUse.setText(time + "\ncount: " + hintCount + "\n" + hintUses);
     }
 }

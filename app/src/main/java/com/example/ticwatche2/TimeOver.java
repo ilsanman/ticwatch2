@@ -20,15 +20,15 @@ public class TimeOver extends WearableActivity {
         setContentView(R.layout.activity_time_over);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
-        managerButton.findViewById(R.id.managerButton);
+        managerButton= findViewById(R.id.managerButton);
         managerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent getIntent = getIntent();
                 Intent intent = new Intent(getApplicationContext(), ManagerActivity.class);
-                intent.putExtra("time", getIntent.getSerializableExtra("time"));
-                intent.putExtra("hintCount", getIntent.getSerializableExtra("hintcount"));
-                intent.putExtra("hintArrayList", getIntent.getSerializableExtra("hintNumber"));
+                intent.putExtra("countDownTime", getIntent.getSerializableExtra("countDownTime"));
+                intent.putExtra("hintCount", getIntent.getSerializableExtra("hintCount"));
+                intent.putExtra("hintArrayList", getIntent.getSerializableExtra("hintArrayList"));
                 startActivity(intent);
             }
         });
